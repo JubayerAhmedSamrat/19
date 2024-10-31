@@ -9,8 +9,16 @@ const showUser = (values)=>{
     const result = values.forEach(value =>{
         console.log(value)
         const div = document.createElement('div')
-        div.innerHTML ="<p>hi</p>"
+        div.style.border = '2px solid black'
+        div.innerHTML =`<p>${value.name.title} ${value.name.first}${value.name.last}</p>
+        <img src="${value.picture.thumbnail}" alt="img" />
+        <button onclick="anotherFunction(${value.login.uuid})">Click me</button>
+        `
         mainDiv.appendChid(div)
     })
+}
+
+const anotherFunction = (value)=>{
+    console.log(value)
 }
 randomUser();
