@@ -13,13 +13,13 @@ const showUser = (values) =>{
         div.innerHTML = `
         <p>${value.name.title} ${value.name.first}${value.name.last}</p>
         <img src="${value.picture.thumbnail}" alt="img"/>
-        <button onclick="anotherFunction(${value.login.uuid})">Click me</button>
+        <button onclick="anotherFunction('${value.login.uuid}')">Click me</button>
         `;
         mainDiv.appendChild(div);
     })
 }
 const anotherFunction = (value) =>{
-    console.log(value);
+    alert(String(value));
 }
 randomUser();
 
