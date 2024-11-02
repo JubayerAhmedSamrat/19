@@ -19,7 +19,7 @@ const showUser = (values) =>{
     })
 }
 const anotherFunction = (value) =>{
-    alert(String(value));
+    alert(value);
 }
 randomUser();
 
